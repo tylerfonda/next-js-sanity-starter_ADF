@@ -33,6 +33,7 @@
 
 /* Optional: max readable line length for longform */
 .prose :where(p,ul,ol,blockquote,figure){ max-width: 75ch; }
+.prose :where(hr){border-top-width:1px}
 
 /* Optional: utility container for layout width */
 @utility container {
