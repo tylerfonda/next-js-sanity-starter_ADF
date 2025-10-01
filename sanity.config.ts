@@ -11,8 +11,6 @@ import {structure} from "./sanity/structure";
 // ↓ default imports (no braces)
 import source from "./sanity/schemas/documents/source";
 import artifact from "./sanity/schemas/documents/artifact";
-import brief from "./sanity/schemas/documents/brief";
-import salon from "./sanity/schemas/documents/salon";
 
 // Singletons (if you use them)
 const singletonActions = new Set(["publish","discardChanges","restore","unpublish"]);
