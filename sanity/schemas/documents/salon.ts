@@ -7,7 +7,6 @@ export default defineType({
 
   // Safer: set defaults at the document level
   initialValue: () => ({
-    startsAt: new Date().toISOString(),
   }),
 
   fields: [
@@ -21,6 +20,7 @@ export default defineType({
       name: 'startsAt',
       title: 'Starts At',
       type: 'datetime',
+      initialValue: () => new Date().toISOString(),
     }),
     defineField({
       name: 'description',
