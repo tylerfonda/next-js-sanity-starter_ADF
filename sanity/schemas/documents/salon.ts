@@ -1,14 +1,9 @@
-import { defineType, defineField } from 'sanity'
+import {defineType, defineField} from 'sanity'
 
 export default defineType({
   name: 'salon',
   title: 'Salon',
   type: 'document',
-
-  // Safer: set defaults at the document level
-  initialValue: () => ({
-  }),
-
   fields: [
     defineField({
       name: 'title',
@@ -20,7 +15,6 @@ export default defineType({
       name: 'startsAt',
       title: 'Starts At',
       type: 'datetime',
-      initialValue: () => new Date().toISOString(),
     }),
     defineField({
       name: 'description',
