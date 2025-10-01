@@ -11,15 +11,18 @@ export default defineType({
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
+    // ... any other fields ...
     defineField({
-      name: 'dueAt',
-      title: 'Due At',
-      type: 'datetime',
+      name: "sources",
+      title: "Sources",
+      type: "array",
+      of: [{type: "reference", to: [{type: "source"}]}],
     }),
     defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'text',
+      name: "updatedAt",
+      title: "Updated At",
+      type: "datetime",
+      initialValue: () => new Date().toISOString(),
     }),
   ],
 })
